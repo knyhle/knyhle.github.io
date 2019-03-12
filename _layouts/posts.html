@@ -12,12 +12,12 @@ layout: default
   </div>
 
   <ul>
-    {%- for kata in site.katas | sort:"date" -%}
+    {%- for post in site.posts | sort:"date" -%}
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ kata.date | date: date_format }}</span>
-        <a href="{{ kata.url | relative_url }}">
-          {{ kata.title | escape }}
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
         </a>
     </li>
     {%- endfor -%}
