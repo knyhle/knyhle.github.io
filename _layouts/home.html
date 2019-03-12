@@ -9,26 +9,52 @@ layout: default
 
   {{ content }}
 
+  <style>
+    ul {
+      list-style-position: inside;
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+    }
+
+    ul.katas-list {
+      float: center;
+    }
+  </style>
+
   {%- if site.posts.size > 0 -%}
-    <!-- <h2 class="post&#45;list&#45;heading">{{ page.list_title | default: "Posts" }}</h2> -->
-    <ul class="post-list">
+    <ul>
+      <h3>Posts</h3>
       {%- for post in site.posts -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
+          <a href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
-        </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>
+  {%- endif -%}
+
+  {%- if site.katas.size > 0 -%}
+    <ul class="katas-list">
+    <h3> Katas </h3>
+      {%- for kata in site.katas | sort:"date" -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ kata.date | date: date_format }}</span>
+          <a href="{{ kata.url | relative_url }}">
+            {{ kata.title | escape }}
+          </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
 
 </div>

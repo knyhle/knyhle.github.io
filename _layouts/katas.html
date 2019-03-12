@@ -3,16 +3,20 @@ layout: default
 ---
 <article class="post">
 
-  <header>
+  <header class="post-header">
     <h3 class="post-title">{{ page.title | escape }}</h3>
   </header>
 
   <ul>
-  {% for kata in site.katas %}
+    {%- for kata in site.katas | sort:"date" -%}
     <li>
-      <a href="{{ kata.url }}"> {{ kata.title }} </a>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ kata.date | date: date_format }}</span>
+        <a href="{{ kata.url | relative_url }}">
+          {{ kata.title | escape }}
+        </a>
     </li>
-  {% endfor %}
+    {%- endfor -%}
   </ul>
 
   <div class="post-content">
