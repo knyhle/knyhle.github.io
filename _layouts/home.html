@@ -10,21 +10,15 @@ layout: default
   {{ content }}
 
   <style>
-    ul {
-      list-style-position: inside;
-      display: inline-block;
-      zoom: 1;
-      *display: inline;
-    }
-
-    ul.katas-list {
-      float: center;
+    ul.list {
+      list-style: inside;
+      margin-left: 0;
     }
   </style>
 
   {%- if site.posts.size > 0 -%}
-    <ul>
-      <h3>Posts</h3>
+    <h3>Posts</h3>
+    <ul class="list">
       {%- for post in site.posts -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -41,8 +35,8 @@ layout: default
   {%- endif -%}
 
   {%- if site.katas.size > 0 -%}
-    <ul class="katas-list">
     <h3> Katas </h3>
+    <ul class="list">
       {%- for kata in site.katas | sort:"date" -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -55,6 +49,8 @@ layout: default
     </ul>
   {%- endif -%}
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  <!-- <div style="text&#45;align: center;"> -->
+  <!--   <p class="rss&#45;subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+  <!-- </div> -->
 
 </div>
