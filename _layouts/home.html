@@ -37,7 +37,7 @@ layout: default
   {%- if site.katas.size > 0 -%}
     <h3> Katas </h3>
     <ul class="list">
-      {%- for kata in site.katas | sort:"date" -%}
+      {%- for kata in site.katas -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ kata.date | date: date_format }}</span>
