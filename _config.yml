@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Kenny's Blog
+title: K-Bytes
 email: kennyle1412@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Mr. Blog is working hard to post content.
+  Bits. Bytes. Everything nice.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://knyhle.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: knyhle
@@ -40,3 +40,9 @@ exclude:
   - vendor/ruby/
   - .gitignore
   - tags
+
+collections:
+  katas:
+    output: true
+  projects:
+    output: true
