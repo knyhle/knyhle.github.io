@@ -20,6 +20,9 @@ layout: default
         <a href="{{ kata.url | relative_url }}">
           {{ kata.title | escape }}
         </a>
+      {%- if kata.difficulty -%}
+      <span class="post-meta"> [{{ kata.difficulty }}] </span>
+      {%- endif -%}
     </li>
     {%- endfor -%}
   </ul>
