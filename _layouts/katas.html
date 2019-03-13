@@ -12,7 +12,8 @@ layout: default
   </div>
 
   <ul>
-    {%- for kata in site.katas -%}
+    {%- assign katas = site.katas | sort:"date" | reverse %}
+    {%- for kata in katas -%}
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <span class="post-meta">{{ kata.date | date: date_format }}</span>

@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
@@ -16,38 +16,48 @@ layout: default
     }
   </style>
 
-  {%- if site.posts.size > 0 -%}
-    <h3>Posts</h3>
-    <ul class="list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+  <div>
+    {%- if site.posts.size > 0 -%}
+    <div style="float:left; width: 50%;">
+      <h3>Posts</h3>
+      <ul class="list">
+        {%- for post in site.posts -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
           <a href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
-        {%- if site.show_excerpts -%}
+          {%- if site.show_excerpts -%}
           {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
 
-  {%- if site.katas.size > 0 -%}
-    <h3> Katas </h3>
-    <ul class="list">
-      {%- for kata in site.katas -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ kata.date | date: date_format }}</span>
+    {%- if site.katas.size > 0 -%}
+    <div>
+      <h3>Katas</h3>
+      <ul class="list">
+        {%- assign katas = site.katas | sort:"date" | reverse %}
+        {%- for kata in katas -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ kata.date | date: date_format }}</span>
           <a href="{{ kata.url | relative_url }}">
             {{ kata.title | escape }}
           </a>
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
+          {%- if kata.difficulty -%}
+          <span class="post-meta">[{{ kata.difficulty }}] {{ kata.abbv }}: {{ kata.number }} </span>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
+  </div>
 
   <!-- <div style="text&#45;align: center;"> -->
   <!--   <p class="rss&#45;subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->

@@ -1,6 +1,6 @@
 ---
-title: kata1
 layout: page
+title: kata1
 date: 2019-3-12
 ---
 
