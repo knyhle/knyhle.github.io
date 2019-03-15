@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: kBytes
+title: Kenny's Blog
 email: kennyle1412@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Bits. Bytes. Everything nice.
@@ -45,4 +45,6 @@ collections:
   katas:
     output: true
   projects:
+    output: true
+  books:
     output: true
