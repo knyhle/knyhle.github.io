@@ -10,91 +10,104 @@ layout: default
   {{ content }}
 
   <style>
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .flex-container > div {
+      min-width: 50%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .flex-container {
+        flex-direction: column;
+      }
+    }
+
     ul.list {
       list-style: inside;
       margin-left: 0;
     }
   </style>
 
-  <div style="width: 50%; float: left;">
-  {%- if site.posts.size > 0 -%}
-  <h2>Posts</h2>
-  <ul class="list">
-    {%- for post in site.posts -%}
-    <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title | truncate: 30 | escape }}
-      </a>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
-  {%- endif -%}
+  <div class="flex-container">
+    <div>
+      <h2>Posts</h2>
+      <ul class="list">
+        {%- for post in site.posts -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title | truncate: 30 | escape }}
+          </a>
+          {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
 
-  {%- if site.katas.size > 0 -%}
-  <h2>Katas</h2>
-  <ul class="list">
-    {%- assign katas = site.katas | sort:"date" | reverse %}
-    {%- for kata in katas -%}
-    <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ kata.date | date: date_format }}</span>
-      <a href="{{ kata.url | relative_url }}">
-        {{ kata.title | truncate: 20 | escape }}
-      </a>
-      {%- if kata.difficulty -%}
-      <span class="post-meta"> [{{ kata.difficulty }}] </span>
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
-  {%- endif -%}
+    <div>
+      <h2>Katas</h2>
+      <ul class="list">
+        {%- assign katas = site.katas | sort:"date" | reverse %}
+        {%- for kata in katas -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ kata.date | date: date_format }}</span>
+          <a href="{{ kata.url | relative_url }}">
+            {{ kata.title | truncate: 20 | escape }}
+          </a>
+          {%- if kata.difficulty -%}
+          <span class="post-meta"> [{{ kata.difficulty }}] </span>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div>
+      <h2>Projects</h2>
+      <ul class="list">
+        {%- assign projects = site.projects %}
+        {%- for project in projects -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ project.date | date: date_format }}</span>
+          <a href="{{ project.url | relative_url }}">
+            {{ project.title | truncate: 25 | escape }}
+          </a>
+          {%- if project.difficulty -%}
+          <span class="post-meta"> [{{ project.difficulty }}] </span>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div>
+      <h2>Books</h2>
+      <ul class="list">
+        {%- assign books = site.books %}
+        {%- for book in books -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ book.date | date: date_format }}</span>
+          <a href="{{ book.url | relative_url }}">
+            {{ book.title | truncate: 25 | escape }}
+          </a>
+          {%- if book.difficulty -%}
+          <span class="post-meta"> [{{ book.difficulty }}] </span>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
   </div>
-  
-  <div>
-  {%- if site.projects.size > 0 -%}
-  <h2>Projects</h2>
-  <ul class="list">
-    {%- assign projects = site.projects %}
-    {%- for project in projects -%}
-    <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ project.date | date: date_format }}</span>
-      <a href="{{ project.url | relative_url }}">
-        {{ project.title | truncate: 25 | escape }}
-      </a>
-      {%- if project.difficulty -%}
-      <span class="post-meta"> [{{ project.difficulty }}] </span>
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
-  {%- endif -%}
-
-  {%- if site.books.size > 0 -%}
-  <h2>Books</h2>
-  <ul class="list">
-    {%- assign books = site.books %}
-    {%- for book in books -%}
-    <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ book.date | date: date_format }}</span>
-      <a href="{{ book.url | relative_url }}">
-        {{ book.title | truncate: 25 | escape }}
-      </a>
-      {%- if book.difficulty -%}
-      <span class="post-meta"> [{{ book.difficulty }}] </span>
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
-  {%- endif -%}
-  </div>
-
   <!-- <div style="text&#45;align: center;"> -->
   <!--   <p class="rss&#45;subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
   <!-- </div> -->
