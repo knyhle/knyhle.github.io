@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 site: leetcode
 abbv: LC
 number: 771
