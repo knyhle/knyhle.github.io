@@ -98,7 +98,7 @@ layout: default
     <div>
       <h2>Reading</h2>
       <ul class="list">
-        {%- assign books = site.books %}
+        {%- assign books = site.reading %}
         {%- for book in books -%}
         <li>
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
