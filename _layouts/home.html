@@ -34,6 +34,12 @@ layout: default
     }
   </style>
 
+  <div>
+    {%- assign first_post = site.posts | last -%}
+    <h2>{{ first_post.title }}</h2>
+    {{ first_post.excerpt }}
+  </div>
+
   <div class="flex-container">
 
     <div>
@@ -90,7 +96,7 @@ layout: default
     </div>
 
     <div>
-      <h2>Books</h2>
+      <h2>Reading</h2>
       <ul class="list">
         {%- assign books = site.books %}
         {%- for book in books -%}
