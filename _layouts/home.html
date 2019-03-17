@@ -58,6 +58,25 @@ layout: default
     </div>
 
     <div>
+      <h2>Reading</h2>
+      <ul class="list">
+        {%- assign books = site.readings %}
+        {%- for book in books -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ book.date | date: date_format }}</span>
+          <a href="{{ book.url | relative_url }}">
+            {{ book.title | truncate: 25 | escape }}
+          </a>
+          {%- if book.difficulty -%}
+          <span class="post-meta"> [{{ book.difficulty }}] </span>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div>
       <h2>Projects</h2>
       <ul class="list">
         {%- assign projects = site.projects %}
@@ -89,25 +108,6 @@ layout: default
           </a>
           {%- if kata.difficulty -%}
           <span class="post-meta"> [{{ kata.difficulty }}] </span>
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-
-    <div>
-      <h2>Reading</h2>
-      <ul class="list">
-        {%- assign books = site.readings %}
-        {%- for book in books -%}
-        <li>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ book.date | date: date_format }}</span>
-          <a href="{{ book.url | relative_url }}">
-            {{ book.title | truncate: 25 | escape }}
-          </a>
-          {%- if book.difficulty -%}
-          <span class="post-meta"> [{{ book.difficulty }}] </span>
           {%- endif -%}
         </li>
         {%- endfor -%}
