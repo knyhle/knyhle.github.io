@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h3 class="post-title">{{ page.title | escape }}</h3>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <ul>
+    {%- assign readings = site.readings | sort:"date" | reverse %}
+    {%- for reading in readings -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ reading.date | date: date_format }}</span>
+        <a href="{{ reading.url | relative_url }}">
+          {{ reading.title | escape }}
+        </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+
+</article>
