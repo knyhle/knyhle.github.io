@@ -44,7 +44,7 @@ layout: default
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <span class="post-meta">{{ post.date | date: date_format }}</span>
           <a href="{{ post.url | relative_url }}">
-            {{ post.title | truncate: 25 | escape }}
+            {{ post.title | truncate: 30 | escape }}
           </a>
         </li>
         {%- endfor -%}
@@ -60,7 +60,7 @@ layout: default
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <span class="post-meta">{{ book.date | date: date_format }}</span>
           <a href="{{ book.url | relative_url }}">
-            {{ book.title | truncate: 25 | escape }}
+            {{ book.title | truncate: 30 | escape }}
           </a>
           {%- if book.difficulty -%}
           <span class="post-meta"> [{{ book.difficulty }}] </span>
@@ -79,7 +79,7 @@ layout: default
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <span class="post-meta">{{ project.date | date: date_format }}</span>
           <a href="{{ project.url | relative_url }}">
-            {{ project.title | truncate: 25 | escape }}
+            {{ project.title | truncate: 30 | escape }}
           </a>
           {%- if project.difficulty -%}
           <span class="post-meta"> [{{ project.difficulty }}] </span>
@@ -98,7 +98,7 @@ layout: default
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <span class="post-meta">{{ kata.date | date: date_format }}</span>
           <a href="{{ kata.url | relative_url }}">
-            {{ kata.title | truncate: 20 | escape }}
+            {{ kata.title | truncate: 25 | escape }}
           </a>
           {%- if kata.difficulty -%}
           <span class="post-meta"> [{{ kata.difficulty }}] </span>

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h3 class="post-title">{{ page.title | escape }}</h3>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <ul>
+    {%- for project in site.projects -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="post-meta">{{ project.date | date: date_format }}</span>
+        <a href="{{ project.url | relative_url }}">
+          {{ project.title | escape }}
+        </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+
+</article>
