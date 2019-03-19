@@ -2,12 +2,24 @@
 layout: post
 title: Hello World!
 ---
+> The more you know, the more you don't know.
+> -- Aristotle
 
-```c
-#include <stdio.h>
-int main () {
-    printf("Hello World!\n");
-    return 0;
-}
-```
-This is a blog to mostly focused on my day to day activities and to keep a record of what I'm learning.
+Over the years since I've been studying Computer Science, I've learned a lot of things but also realized that I still don't know anything.
+The field is too massive to know everything, but you can pick up little nuggets of information here and there to learn as much as you can. 
+
+![I feel like I'm forgetting something...](/assets/images/forget.png)
+
+However, forgetting those bits and pieces over the years is a sad thing.
+Since I started on this path 7 years ago, I can only really remember those fustrating or celebratory moments that sticks with you. 
+Everything else feels like they're leaves in the wind. 
+Sometimes they're there, most of the time they're not.
+
+I distinctly remember trying to set up an executable in Java when everything was just starting, because I wanted to stop opening up JCreator just to run a java file.
+While I can recall finally succeeding and somewhat learning how to use the command line, it's only what I can remember from my inherently fallible memory.
+I don't want to someday forget the experience ever existed.
+
+So I created this blog to keep a record of what I've learned and to make sure I don't forget my progress as I learn more and improve myself.
+It'll also serve to improve my writing skills that will hopefully get better in time and I won't sound like chalk against the wall and bore people to death.
+
+I wish I started this blog before I went to college so I could've kept track of all my experience there, but hindsight is 20/20 and it's never too late to start.

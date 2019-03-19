@@ -41,6 +41,7 @@ exclude:
   - .gitignore
   - tags
 
+# Collections for different models excluding posts
 collections:
   katas:
     output: true
