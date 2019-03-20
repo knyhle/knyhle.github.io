@@ -89,25 +89,6 @@ layout: default
       </ul>
     </div>
 
-    <div>
-      <h2>Katas</h2>
-      <ul class="list">
-        {%- assign katas = site.katas | sort:"date" | reverse %}
-        {%- for kata in katas -%}
-        <li>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ kata.date | date: date_format }}</span>
-          <a href="{{ kata.url | relative_url }}">
-            {{ kata.title | truncate: 25 | escape }}
-          </a>
-          {%- if kata.difficulty -%}
-          <span class="post-meta"> [{{ kata.difficulty }}] </span>
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-
   </div>
   <!-- <div style="text&#45;align: center;"> -->
   <!--   <p class="rss&#45;subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->

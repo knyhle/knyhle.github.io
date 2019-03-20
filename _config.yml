@@ -44,8 +44,6 @@ exclude:
 
 # Collections for different models excluding posts
 collections:
-  katas:
-    output: true
   projects:
     output: true
   readings:
