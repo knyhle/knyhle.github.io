@@ -4,21 +4,27 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1>{{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
 
   <style>
-
     .flex-container {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
     }
 
-    .flex-container > div {
+    .column {
+      float: left;
       min-width: 50%;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
     }
 
     @media only screen and (max-width: 700px) {
@@ -36,7 +42,7 @@ layout: default
 
   <div class="flex-container">
 
-    <div>
+    <div class="column">
       <h2>Posts</h2>
       <ul class="list">
         {%- for post in site.posts -%}
@@ -51,42 +57,40 @@ layout: default
       </ul>
     </div>
 
-    <div>
-      <h2>Reading</h2>
-      <ul class="list">
-        {%- assign books = site.readings %}
-        {%- for book in books -%}
-        <li>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ book.date | date: date_format }}</span>
-          <a href="{{ book.url | relative_url }}">
-            {{ book.title | truncate: 30 | escape }}
-          </a>
-          {%- if book.difficulty -%}
-          <span class="post-meta"> [{{ book.difficulty }}] </span>
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
-    </div>
+    <div class="column">
 
-    <div>
-      <h2>Projects</h2>
-      <ul class="list">
-        {%- assign projects = site.projects %}
-        {%- for project in projects -%}
-        <li>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ project.date | date: date_format }}</span>
-          <a href="{{ project.url | relative_url }}">
-            {{ project.title | truncate: 30 | escape }}
-          </a>
-          {%- if project.difficulty -%}
-          <span class="post-meta"> [{{ project.difficulty }}] </span>
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
+      <div>
+        <h2>Reading</h2>
+        <ul class="list">
+          {%- assign books = site.readings %}
+          {%- for book in books -%}
+          <li>
+            <!-- {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ book.date | date: date_format }}</span> -->
+            <a href="{{ book.url | relative_url }}">
+              {{ book.title | truncate: 40 | escape }}
+            </a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
+      <div>
+        <h2>Projects</h2>
+        <ul class="list">
+          {%- assign projects = site.projects %}
+          {%- for project in projects -%}
+          <li>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ project.date | date: date_format }}</span>
+            <a href="{{ project.url | relative_url }}">
+              {{ project.title | truncate: 30 | escape }}
+            </a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
     </div>
 
   </div>
