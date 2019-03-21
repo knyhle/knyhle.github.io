@@ -1,0 +1,29 @@
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.column {
+    float: left;
+    min-width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@include media-query($on-palm) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+ul.list {
+    list-style: inside;
+    margin-left: 0;
+    padding-right: 10px;
+}
