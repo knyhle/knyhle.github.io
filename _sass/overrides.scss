@@ -4,6 +4,14 @@
   visibility: collapse;
   height: 0;
   min-height: 0;
+  background-image: url("/assets/images/nightskytwitter.png");
+}
+
+.site-title {
+  &,
+  &:visited {
+    color: $background-color;
+  }
 }
 
 // How the posts list looks like on home page
