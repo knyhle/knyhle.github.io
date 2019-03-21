@@ -2,11 +2,18 @@
 layout: post
 title: Hello World!
 ---
-> The more you know, the more you don't know.
-> -- Aristotle
+```c
+#include <stdio.h>
+int main () {
+  puts("The more you know, the more you don't know.");
+  puts("                                -Aristotle.");
+  return 0;
+}
+```
 
 Over the years since I've been studying Computer Science, I've learned a lot of things but also realized that I still don't know anything.
-The field is too massive to know everything, but you can pick up little nuggets of information here and there to learn as much as you can. 
+The field is too massive to know everything, but you can learn something new everyday.
+Learning doesn't happen in school, but throughout a person's entire life.
 
 ![I feel like I'm forgetting something...](/assets/images/forget.png "Like my chips.")
 
@@ -14,7 +21,6 @@ However, forgetting those bits and pieces over the years is a sad thing.
 Since I started on this path 7 years ago, I can only really remember those fustrating or celebratory moments that sticks with you. 
 Everything else feels like they're leaves in the wind. 
 Sometimes they're there, most of the time they're not.
-
 
 I distinctly remember trying to set up an executable in Java when everything was just starting, because I wanted to stop opening up JCreator just to run a java file.
 While I can recall finally succeeding and somewhat learning how to use the command line, it's only what I can remember from my inherently fallible memory.
