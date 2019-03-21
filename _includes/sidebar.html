@@ -5,12 +5,16 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
 
+
   {%- assign default_paths = site.pages | map: "path" -%}
   {%- assign page_paths = site.header_pages | default: default_paths -%}
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="sidebar-nav-item" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
+    <img src="/assets/images/mountainhero.jpeg" width="225px" alt="Mountain Hero!">
+
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" rel="author" href="{{ "/" | relative_url }}">Home</a>
     {%- for path in page_paths -%}
       {%- assign my_page = site.pages | where: "path", path | first -%}
       {%- if my_page.title -%}
