@@ -14,7 +14,7 @@
           transition: all .3s ease-in-out;
 }
 
-
+// Hide the sidebar on mobile
 @include media-query($on-palm) {
   .sidebar {
     visibility: hidden;
