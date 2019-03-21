@@ -3,38 +3,29 @@
     visibility: collapse;
 }
 
-// Flex container for home page layout
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-// Set 2 columns 
-.column {
-    float: left;
-}
-
-// reset column
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 // How the posts list looks like on home page
 ul.list {
     list-style: inside;
     margin-left: 0;
 }
 
+.wrapper {
+    margin-left: 15em;
+}
+
+.post-content {
+    margin-bottom: 0;
+}
+
 @include media-query($on-palm) {
-    // No horizontal space on mobile to stack containers side-by-side
-    .flex-container {
-        flex-direction: column;
-    }
-    
+    // Make site header visible to mobile
     .site-header {
         visibility: visible;
+    }
+    
+    // Remove left indent since no sidebar
+    .wrapper {
+        margin-left: auto;
     }
 }
 
