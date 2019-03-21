@@ -1,4 +1,8 @@
 
+.site-header {
+    visibility: collapse;
+}
+
 // Flex container for home page layout
 .flex-container {
     display: flex;
@@ -17,17 +21,20 @@
     display: table;
     clear: both;
 }
-
-// No horizontal space on mobile to stack containers side-by-side
-// Just set default to columns
-@include media-query($on-palm) {
-    .flex-container {
-        flex-direction: column;
-    }
-}
-
 // How the posts list looks like on home page
 ul.list {
     list-style: inside;
     margin-left: 0;
 }
+
+@include media-query($on-palm) {
+    // No horizontal space on mobile to stack containers side-by-side
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .site-header {
+        visibility: visible;
+    }
+}
+
