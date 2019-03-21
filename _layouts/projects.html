@@ -12,10 +12,9 @@ layout: default
   </div>
 
   <ul>
-    {%- for project in site.projects -%}
+    {%- assign projects = site.projects | sorted: "date" | reverse -%}
+    {%- for project in projects -%}
     <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ project.date | date: date_format }}</span>
         <a href="{{ project.url | relative_url }}">
           {{ project.title | escape }}
         </a>
