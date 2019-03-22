@@ -15,12 +15,16 @@ layout: default
     {%- assign projects = site.projects | sorted: "date" | reverse -%}
     {%- for project in projects -%}
     <li>
-        <a href="{{ project.url | relative_url }}">
-          {{ project.title | escape }}
-        </a>
+        <span class="project-title">
+          <a href="{{ project.url | relative_url }}">
+            {{ project.title | escape }}
+          </a>
+        </span>
 
         {% if project.description %}
+        <span class="project-description">
           - {{ project.description }}
+        </span>
         {% endif %}
 
         {% if project.languages %}
