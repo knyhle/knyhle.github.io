@@ -24,8 +24,12 @@ url: "https://knyhle.github.io" # the base hostname & protocol for your site, e.
 github_username: knyhle
 twitter_username: knyhle
 
+# Comments
 disqus:
   shortname: knyhle
+
+# Analytics
+google_analytics: UA-136758442-1
 
 header_pages:
   - posts.md
