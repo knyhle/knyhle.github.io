@@ -5,8 +5,7 @@ title: Hello World!
 ```c
 #include <stdio.h>
 int main () {
-  puts("The more you know, the more you don't know.");
-  puts("                                -Aristotle.");
+  puts("Hello World!");
   return 0;
 }
 ```
