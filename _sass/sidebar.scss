@@ -19,7 +19,8 @@
 .sidebar-item {
   padding: 1rem;
 }
-.sidebar-item p:last-child {
+.sidebar-item p {
+  padding: 0;
   margin-bottom: 0;
 }
 
