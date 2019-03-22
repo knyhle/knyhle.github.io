@@ -19,6 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Bits. Bytes. Everything nice.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://knyhle.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Socials
 github_username: knyhle
 twitter_username: knyhle
 
@@ -56,4 +58,4 @@ collections:
   projects:
     output: true
   readings:
-    output: true
+    output: tru
