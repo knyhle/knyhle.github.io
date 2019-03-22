@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: reading
 title: "Computer Systems: A Programmer's Perspective"
 date: 2019-3-19
+category_tag: computer-systems
 ---
 
 <a href="https://www.amazon.com/Computer-Systems-Programmers-Perspective-3rd/dp/013409266X">
