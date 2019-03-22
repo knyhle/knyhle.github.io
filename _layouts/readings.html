@@ -11,7 +11,7 @@ layout: default
     {{ content }}
   </div>
 
-  <ul>
+  <ul class="list">
     {%- assign readings = site.readings | sort:"date" | reverse %}
     {%- for reading in readings -%}
     <li>

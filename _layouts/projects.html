@@ -11,7 +11,7 @@ layout: default
     {{ content }}
   </div>
 
-  <ul>
+  <ul class="list">
     {%- assign projects = site.projects | sorted: "date" | reverse -%}
     {%- for project in projects -%}
     <li>
