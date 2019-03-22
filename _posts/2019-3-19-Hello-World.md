@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hello World!
+comments: true
 ---
 ```c
 #include <stdio.h>
