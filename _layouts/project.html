@@ -18,7 +18,7 @@ layout: default
   </div>
 
   <ul class="list">
-    {% for post in site.tags[page.project_tag] %}
+    {% for post in site.tags[page.category_tag] %}
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <span class="post-meta">{{ post.date | date: date_format }}</span>

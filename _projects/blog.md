@@ -2,7 +2,7 @@
 layout: project
 title: Blog
 date: 2019-3-20
-project_tag: blog
+category_tag: blog
 ---
 
 Information when creating this blog
