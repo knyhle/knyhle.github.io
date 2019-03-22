@@ -18,7 +18,7 @@ layout: default
   </div>
 
   <h3>Related Posts</h3>
-  <ul class="list">
+  <ul class="list" style="padding-bottom: 10px;">
     {% for post in site.tags[page.category_tag] %}
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
