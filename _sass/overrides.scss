@@ -14,20 +14,20 @@
   }
 }
 
+// Take into account sidebar on desktop
+.wrapper {
+  margin-left: 15em;
+}
+
 .post-header {
   border-bottom: 1px solid grey;
   margin-bottom: $spacing-unit / 2;
 }
 
-// How the posts list looks like on home page
+// Lists of posts
 ul.list {
   list-style: inside;
   margin-left: 0;
-}
-
-// Take into account sidebar on desktop
-.wrapper {
-  margin-left: 15em;
 }
 
 .post-content {
@@ -52,6 +52,10 @@ blockquote {
   // Remove left indent since no sidebar
   .wrapper {
     margin-left: auto;
+  }
+
+  .project-title {
+    @include relative-font-size(1.125);
   }
 
   blockquote {
