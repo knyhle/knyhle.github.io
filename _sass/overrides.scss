@@ -28,11 +28,14 @@ ul.list {
 // Take into account sidebar on desktop
 .wrapper {
   margin-left: 15em;
-  max-width: 1000px;
 }
 
 .post-content {
   margin-bottom: 0;
+}
+
+blockquote {
+  @include relative-font-size(1.075);
 }
 
 @include media-query($on-palm) {
@@ -44,7 +47,9 @@ ul.list {
   // Remove left indent since no sidebar
   .wrapper {
     margin-left: auto;
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  }
+
+  blockquote {
+    @include relative-font-size(0.9375);
   }
 }
