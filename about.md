@@ -24,3 +24,5 @@ I even meditated a bit just to decide what to say too.
 But this is also a part of who I am and I accept that.
 
 Everything I put on this blog is me.
+
+![Picture of Maple](/assets/images/maplecar1.jpeg "Here's a picture of my dog")
