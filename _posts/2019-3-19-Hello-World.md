@@ -2,6 +2,7 @@
 layout: post
 title: Hello World!
 comments: true
+tags: [blog]
 ---
 ```c
 #include <stdio.h>
