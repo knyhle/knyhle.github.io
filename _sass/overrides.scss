@@ -34,6 +34,11 @@ ul.list {
   margin-bottom: 0;
 }
 
+.project-languages {
+  color: grey;
+  @include relative-font-size(0.8375);
+}
+
 blockquote {
   @include relative-font-size(1.075);
 }

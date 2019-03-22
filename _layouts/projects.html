@@ -18,6 +18,14 @@ layout: default
         <a href="{{ project.url | relative_url }}">
           {{ project.title | escape }}
         </a>
+
+        {% if project.description %}
+          - {{ project.description }}
+        {% endif %}
+
+        {% if project.languages %}
+          <span class="project-languages"> {{ project.languages | join: ", " }} </span>
+        {% endif %}
     </li>
     {%- endfor -%}
   </ul>
