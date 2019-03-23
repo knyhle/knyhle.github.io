@@ -11,18 +11,16 @@ My name is Kenny and I'm an aspiring Software Engineer.
 > I enjoy programming, games, and reading stories. <br/>
 > I hate onions.
 
-Wow, how basic. What an introduction. Something that can be found on countless other **about me** pages and intro briefs.
-And that's understandable because talking about yourself is (in my opinion) is one of the easiest, yet also hardest things to do.
-In a way, it's like making a speech in front of an audience. 
-It can be easy, or it can be hard.
-Depending on the person and what they have to say.
+Now that the generic information is out of the way, I created this blog mostly to entertain myself and keep a record of things that I've learned.
+I enjoy learning new things and actually applying that knowledge first hand to create this site was part of that experience.
+While this blog wasn't supposed to be anything fancy (it still isn't), it's actually more sophisticated than I intended it to be.
 
-How do you avoid sounding formulaic when following the general outline of: accomplishments, hobbies, likes, and dislikes is what makes up a person? 
-Even I'm writing all these words because I'm not really sure what to say.
-I like sounding philosophical though and what I'm saying makes sense to me.
-I even meditated a bit just to decide what to say too.
-But this is also a part of who I am and I accept that.
+In a way, it represents the person who I am.
+Relatively simple, but always willing to improve.
+Wow, how cliche right?
+Next thing you know, I'll be talking about how I'm a super focused and dedicated person that forgets the passage of time when I'm trying to solve a problem.
+Okay, sorry.
 
-Everything I put on this blog is me.
+Here's a picture of my dog so it's not a total waste of time.
 
 ![Picture of Maple](/assets/images/maplecar1.jpeg "Here's a picture of my dog")
