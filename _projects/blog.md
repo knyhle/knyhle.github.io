@@ -37,7 +37,9 @@ Though the title bar had it's colors inverted to black background vs. white fore
 
 
 #### **Resources Used**
+- <https://github.com/poole/lanyon>
 - <https://github.com/jekyll/minima>
 - <https://dev.to/rpalo/jekyll-tags-the-easy-way>
+- [https://github.com/adam-p/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [https://codinfox.github.io/dev/use-tags-and-categories](https://codinfox.github.io/dev/2015/03/06/use-tags-and-categories-in-your-jekyll-based-github-pages/)
-- <https://github.com/poole/lanyon>
+
