@@ -1,9 +1,9 @@
 
 // disable site header for desktop
 .site-header {
-  visibility: collapse;
   height: 0;
   min-height: 0;
+  visibility: collapse;
   background-image: url("/assets/images/nightskytwitter.png");
 }
 
@@ -49,6 +49,7 @@ blockquote {
     visibility: visible;
     min-height: $spacing-unit * 1.865;
   }
+
   // Remove left indent since no sidebar
   .wrapper {
     margin-left: auto;
