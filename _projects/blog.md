@@ -7,14 +7,13 @@ languages: [HTML, CSS]
 description: static website created with Jekyll and hosted on Github Pages.
 ---
 
-Don't really know jekyll, only ever used react before. New experience.
-Really wanted a sidebar, but didn't know how to do that. 
-Had to experiment and saw github: poole/lanyon and really liked the theme.
-However, while the theme was nice, I wanted to try and customize my own.
-Though it's built on top of minima, it was a great learning experience to learn more about html and css.
+This was a blog I created for fun and to put my portfolio on.
+While it wasn't my first time working with HTML and CSS, it was my first time learning about Jekyll.
+I enjoyed the simplicity of a static site with a base to work with instead of creating everything through scratch.
 
-Overall Design
+Design
 ===
+The blog was originally built on top of 
 
 Sidebar
 ===
