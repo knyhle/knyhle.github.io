@@ -1,10 +1,9 @@
 ---
 layout: project
 title: Blog
-date: 2019-3-20
 category_tag: blog
 languages: [HTML, CSS]
-description: static website created with Jekyll and hosted on Github Pages.
+description: static website created with Jekyll and hosted on Github.
 ---
 
 This was a blog I created for fun and to put my portfolio on.
