@@ -11,6 +11,14 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name"> {{ page.author | default: " Kenny Le " }} </span></span>
+      {% if page.description %}
+      <span class="page-description">
+        • {{ page.description }}
+      </span>
+        {% endif %}
+      {% if page.languages %}
+       • <span class="project-languages"> {{ page.languages | join: ", " }} </span>
+      {% endif %}
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
