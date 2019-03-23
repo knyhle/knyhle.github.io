@@ -26,20 +26,18 @@ I felt it added a sense of completeness to the blog where it would have too much
 ===
 The mobile site retains the original minima theme as sidebar doesn't really work on such a small screen.
 The categories become the hamburger bar anyways so there's always a way to access the other parts of the site.
-Though the title bar had it's colors inverted to black background / white foreground as even the smallest contrast makes a big difference to the overall feel.
+Though the title bar had it's colors inverted to black background vs. white foreground as even the smallest contrast makes a big difference to the overall feel.
 
 **Sidebar**
 ===
 
+
 **Comments**
 ===
 
-Resources Used:
-===
-https://github.com/jekyll/minima
 
-https://dev.to/rpalo/jekyll-tags-the-easy-way
-
-https://codinfox.github.io/dev/2015/03/06/use-tags-and-categories-in-your-jekyll-based-github-pages/
-
-https://github.com/poole/lanyon
+#### **Resources Used**
+- <https://github.com/jekyll/minima>
+- <https://dev.to/rpalo/jekyll-tags-the-easy-way>
+- [https://codinfox.github.io/dev/use-tags-and-categories](https://codinfox.github.io/dev/2015/03/06/use-tags-and-categories-in-your-jekyll-based-github-pages/)
+- <https://github.com/poole/lanyon>
