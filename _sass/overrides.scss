@@ -7,6 +7,10 @@
   background-image: url("/assets/images/nightskytwitter.png");
 }
 
+.site-footer {
+  visibility: hidden;
+}
+
 .site-title {
   &,
   &:visited {
@@ -48,6 +52,10 @@ blockquote {
   .site-header {
     visibility: visible;
     min-height: $spacing-unit * 1.865;
+  }
+
+  .site-footer {
+    visibility: visible;
   }
 
   // Remove left indent since no sidebar
