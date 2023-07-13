@@ -10,7 +10,7 @@
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
-    <img src="/assets/images/mountainhero.jpeg" width="225px" alt="Mountain Hero!">
+    <img src="/assets/images/maplecar1.jpeg" width="225px" alt="maplecar1">
 
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" rel="author" href="{{ "/" | relative_url }}">Home</a>
     {%- for path in page_paths -%}
@@ -25,10 +25,10 @@
     {%- if site.linkedin_username -%}<a class= "sidebar-nav-item" href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg> <span class="username">{{ site.linkedin_username| escape }}</span></a></li>{%- endif -%}
 
   </nav>
-  
-  <div class="sidebar-item"> 
+
+  <div class="sidebar-item">
     <p>{{ site.description }}</p>
-    <p> Powered by Github </p> 
+    <p> Powered by Github </p>
   </div>
 
   <div class="sidebar-item">
@@ -36,4 +36,3 @@
   </div>
 
 </div>
-
